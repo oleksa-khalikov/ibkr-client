@@ -22,29 +22,26 @@
  * SOFTWARE.
  */
 
-package ua.com.gfalcon.ibkr.server.jaxrs.api;
+package ua.com.gfalcon.ibkr.model;
 
-import javax.validation.constraints.NotNull;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.SecurityContext;
+import java.util.ArrayList;
+import java.util.List;
 
-import ua.com.gfalcon.ibkr.model.Body;
-import ua.com.gfalcon.ibkr.model.ConIdRequest;
+import javax.validation.Valid;
 
-/**
- * Trsrv api service.
- */
-public abstract class TrsrvApiService {
+import org.springframework.validation.annotation.Validated;
 
-    public abstract Response trsrvFuturesGet(@NotNull String symbols, SecurityContext securityContext)
-            throws NotFoundException;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
 
-    public abstract Response trsrvSecdefPost(ConIdRequest body, SecurityContext securityContext) throws NotFoundException;
+import lombok.Data;
 
-    public abstract Response trsrvSecdefScheduleGet(@NotNull String assetClass, @NotNull String symbol, String exchange,
-            String exchangeFilter, SecurityContext securityContext) throws NotFoundException;
+@Data
+@Validated
+public class ConIdRequest {
 
-    public abstract Response trsrvStocksGet(@NotNull String symbols, SecurityContext securityContext)
-            throws NotFoundException;
-
+    @Valid
+    @JsonProperty("conids")
+    @SerializedName("conids")
+    private List<Integer> conids = new ArrayList<>();
 }

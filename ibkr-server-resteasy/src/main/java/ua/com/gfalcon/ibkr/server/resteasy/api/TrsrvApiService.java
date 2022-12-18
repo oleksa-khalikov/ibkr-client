@@ -28,6 +28,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.ConIdRequest;
 
 /**
  * Trsrv api service.
@@ -36,7 +37,7 @@ public interface TrsrvApiService {
 
     Response trsrvFuturesGet(String symbols, SecurityContext securityContext) throws NotFoundException;
 
-    Response trsrvSecdefPost(Body body, SecurityContext securityContext) throws NotFoundException;
+    Response trsrvSecdefPost(ConIdRequest body, SecurityContext securityContext) throws NotFoundException;
 
     Response trsrvSecdefScheduleGet(String assetClass, String symbol, String exchange, String exchangeFilter,
             SecurityContext securityContext) throws NotFoundException;

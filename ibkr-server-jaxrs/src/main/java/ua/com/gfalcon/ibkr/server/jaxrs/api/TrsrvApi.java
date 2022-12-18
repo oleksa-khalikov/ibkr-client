@@ -36,6 +36,7 @@ import javax.ws.rs.core.SecurityContext;
 
 import io.swagger.annotations.ApiParam;
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.ConIdRequest;
 import ua.com.gfalcon.ibkr.model.Secdef;
 import ua.com.gfalcon.ibkr.server.jaxrs.api.factories.TrsrvApiServiceFactory;
 
@@ -105,7 +106,7 @@ public class TrsrvApi {
     @io.swagger.annotations.ApiResponses(
             value = {@io.swagger.annotations.ApiResponse(
                     code = 200, message = "returns an array of secdef info", response = Secdef.class)})
-    public Response trsrvSecdefPost(@ApiParam(value = "request body", required = true) Body body,
+    public Response trsrvSecdefPost(@ApiParam(value = "request body", required = true) ConIdRequest body,
             @Context SecurityContext securityContext) throws NotFoundException {
         return delegate.trsrvSecdefPost(body, securityContext);
     }

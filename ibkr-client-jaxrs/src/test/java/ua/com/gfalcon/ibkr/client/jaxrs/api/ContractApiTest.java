@@ -62,6 +62,7 @@ import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 
 import ua.com.gfalcon.ibkr.client.jaxrs.api.ContractApi;
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.ConIdRequest;
 import ua.com.gfalcon.ibkr.model.Conid;
 import ua.com.gfalcon.ibkr.model.Symbol;
 
@@ -247,7 +248,7 @@ public class ContractApiTest {
      */
     @Test
     public void trsrvSecdefPostTest() {
-        Body body = null;
+        ConIdRequest body = null;
         //Secdef response = api.trsrvSecdefPost(body);
         //assertNotNull(response);
         // TODO: test validations

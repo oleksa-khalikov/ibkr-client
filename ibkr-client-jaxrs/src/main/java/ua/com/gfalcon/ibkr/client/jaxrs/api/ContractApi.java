@@ -38,6 +38,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.ConIdRequest;
 import ua.com.gfalcon.ibkr.model.Conid;
 import ua.com.gfalcon.ibkr.model.Contract;
 import ua.com.gfalcon.ibkr.model.Secdef;
@@ -195,7 +196,7 @@ public interface ContractApi {
     @ApiResponses(
             value = {@ApiResponse(
                     code = 200, message = "returns an array of secdef info", response = Secdef.class)})
-    public Secdef trsrvSecdefPost(Body body);
+    public Secdef trsrvSecdefPost(ConIdRequest body);
 
     /**
      * Get trading schedule for symbol.

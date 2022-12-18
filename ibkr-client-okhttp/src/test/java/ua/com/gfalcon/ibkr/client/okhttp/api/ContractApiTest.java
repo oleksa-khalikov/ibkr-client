@@ -43,6 +43,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.ConIdRequest;
 import ua.com.gfalcon.ibkr.model.Conid;
 import ua.com.gfalcon.ibkr.model.Contract;
 import ua.com.gfalcon.ibkr.model.Secdef;
@@ -207,7 +208,7 @@ public class ContractApiTest {
      */
     @Test
     public void trsrvSecdefPostTest() throws Exception {
-        Body body = null;
+        ConIdRequest body = null;
         Secdef response = api.trsrvSecdefPost(body);
 
         // TODO: test validations
