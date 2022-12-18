@@ -27,6 +27,7 @@ package ua.com.gfalcon.ibkr.server.resteasy.api;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
+import ua.com.gfalcon.ibkr.model.AccountAllocationRequest;
 import ua.com.gfalcon.ibkr.model.Body;
 
 /**
@@ -54,7 +55,7 @@ public interface PortfolioApiService {
 
     Response portfolioAccountsGet(SecurityContext securityContext) throws NotFoundException;
 
-    Response portfolioAllocationPost(Body body, SecurityContext securityContext) throws NotFoundException;
+    Response portfolioAllocationPost(AccountAllocationRequest body, SecurityContext securityContext) throws NotFoundException;
 
     Response portfolioPositionsConidGet(Integer conid, SecurityContext securityContext) throws NotFoundException;
 

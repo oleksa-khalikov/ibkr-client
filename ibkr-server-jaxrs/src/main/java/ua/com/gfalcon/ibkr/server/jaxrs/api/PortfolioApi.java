@@ -37,6 +37,7 @@ import javax.ws.rs.core.SecurityContext;
 
 import io.swagger.annotations.ApiParam;
 import ua.com.gfalcon.ibkr.model.Account;
+import ua.com.gfalcon.ibkr.model.AccountAllocationRequest;
 import ua.com.gfalcon.ibkr.model.AccountLedger;
 import ua.com.gfalcon.ibkr.model.AccountSummary;
 import ua.com.gfalcon.ibkr.model.Accounts;
@@ -247,7 +248,7 @@ public class PortfolioApi {
             value = {@io.swagger.annotations.ApiResponse(
                     code = 200, message = "returns an object of three different allocations",
                     response = Allocation.class)})
-    public Response portfolioAllocationPost(@ApiParam(value = "accounts info", required = true) Body body,
+    public Response portfolioAllocationPost(@ApiParam(value = "accounts info", required = true) AccountAllocationRequest body,
             @Context SecurityContext securityContext) throws NotFoundException {
         return delegate.portfolioAllocationPost(body, securityContext);
     }

@@ -27,6 +27,7 @@ package ua.com.gfalcon.ibkr.server.jaxrs.api;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
+import ua.com.gfalcon.ibkr.model.AccountAllocationRequest;
 import ua.com.gfalcon.ibkr.model.Body;
 
 /**
@@ -57,7 +58,7 @@ public abstract class PortfolioApiService {
 
     public abstract Response portfolioAccountsGet(SecurityContext securityContext) throws NotFoundException;
 
-    public abstract Response portfolioAllocationPost(Body body, SecurityContext securityContext)
+    public abstract Response portfolioAllocationPost(AccountAllocationRequest body, SecurityContext securityContext)
             throws NotFoundException;
 
     public abstract Response portfolioPositionsConidGet(Integer conid, SecurityContext securityContext)

@@ -41,6 +41,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import ua.com.gfalcon.ibkr.model.Account;
+import ua.com.gfalcon.ibkr.model.AccountAllocationRequest;
 import ua.com.gfalcon.ibkr.model.Accounts;
 import ua.com.gfalcon.ibkr.model.Allocation;
 import ua.com.gfalcon.ibkr.model.Body;
@@ -201,7 +202,7 @@ public class PortfolioApiTest {
      */
     @Test
     public void portfolioAllocationPostTest() throws Exception {
-        Body body = null;
+        AccountAllocationRequest body = null;
         Allocation response = api.portfolioAllocationPost(body);
 
         // TODO: test validations

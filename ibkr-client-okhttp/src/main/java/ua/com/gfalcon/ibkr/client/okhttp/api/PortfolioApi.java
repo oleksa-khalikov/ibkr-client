@@ -1,17 +1,25 @@
 /*
- *   Copyright 2016-2022 Oleksii V. KHALIKOV
+ * MIT License
  *
- *    Licensed under the Apache License, Version 2.0 (the "License");
- *    you may not use this file except in compliance with the License.
- *    You may obtain a copy of the License at
+ * Copyright (c) 2015-2022 Oleksii Khalikov
  *
- *        http://www.apache.org/licenses/LICENSE-2.0
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
- *    Unless required by applicable law or agreed to in writing, software
- *    distributed under the License is distributed on an "AS IS" BASIS,
- *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *    See the License for the specific language governing permissions and
- *    limitations under the License.
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
 /*
@@ -47,6 +55,7 @@ import ua.com.gfalcon.ibkr.client.okhttp.Pair;
 import ua.com.gfalcon.ibkr.client.okhttp.ProgressRequestBody;
 import ua.com.gfalcon.ibkr.client.okhttp.ProgressResponseBody;
 import ua.com.gfalcon.ibkr.model.Account;
+import ua.com.gfalcon.ibkr.model.AccountAllocationRequest;
 import ua.com.gfalcon.ibkr.model.Accounts;
 import ua.com.gfalcon.ibkr.model.Allocation;
 import ua.com.gfalcon.ibkr.model.Body;
@@ -1309,7 +1318,7 @@ public class PortfolioApi {
      * @return Allocation
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Allocation portfolioAllocationPost(Body body) throws ApiException {
+    public Allocation portfolioAllocationPost(AccountAllocationRequest body) throws ApiException {
         ApiResponse<Allocation> resp = portfolioAllocationPostWithHttpInfo(body);
         return resp.getData();
     }
@@ -1323,7 +1332,7 @@ public class PortfolioApi {
      * @return ApiResponse&lt;Allocation&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Allocation> portfolioAllocationPostWithHttpInfo(Body body) throws ApiException {
+    public ApiResponse<Allocation> portfolioAllocationPostWithHttpInfo(AccountAllocationRequest body) throws ApiException {
         com.squareup.okhttp.Call call = portfolioAllocationPostValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<Allocation>() {
         }.getType();
@@ -1331,7 +1340,7 @@ public class PortfolioApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call portfolioAllocationPostValidateBeforeCall(Body body,
+    private com.squareup.okhttp.Call portfolioAllocationPostValidateBeforeCall(AccountAllocationRequest body,
             final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
 
@@ -1355,10 +1364,10 @@ public class PortfolioApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call portfolioAllocationPostCall(Body body,
+    public com.squareup.okhttp.Call portfolioAllocationPostCall(AccountAllocationRequest body,
             final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        final Object localVarPostBody = body;
+        final AccountAllocationRequest localVarPostBody = body;
 
         // create path and map variables
         final String localVarPath = "/portfolio/allocation";
@@ -1412,7 +1421,7 @@ public class PortfolioApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call portfolioAllocationPostAsync(Body body, final ApiCallback<Allocation> callback)
+    public com.squareup.okhttp.Call portfolioAllocationPostAsync(AccountAllocationRequest body, final ApiCallback<Allocation> callback)
             throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;

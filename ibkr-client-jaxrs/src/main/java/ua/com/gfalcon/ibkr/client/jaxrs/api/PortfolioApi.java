@@ -36,6 +36,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import ua.com.gfalcon.ibkr.model.Account;
+import ua.com.gfalcon.ibkr.model.AccountAllocationRequest;
 import ua.com.gfalcon.ibkr.model.Accounts;
 import ua.com.gfalcon.ibkr.model.Allocation;
 import ua.com.gfalcon.ibkr.model.Body;
@@ -186,7 +187,7 @@ public interface PortfolioApi {
             value = {@ApiResponse(
                     code = 200, message = "returns an object of three different allocations",
                     response = Allocation.class)})
-    public Allocation portfolioAllocationPost(Body body);
+    public Allocation portfolioAllocationPost(AccountAllocationRequest body);
 
     /**
      * Positions by Conid

@@ -61,6 +61,7 @@ import org.junit.Test;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 
 import ua.com.gfalcon.ibkr.client.jaxrs.api.PortfolioApi;
+import ua.com.gfalcon.ibkr.model.AccountAllocationRequest;
 import ua.com.gfalcon.ibkr.model.Body;
 
 
@@ -224,7 +225,7 @@ public class PortfolioApiTest {
      */
     @Test
     public void portfolioAllocationPostTest() {
-        Body body = null;
+        AccountAllocationRequest body = null;
         //Allocation response = api.portfolioAllocationPost(body);
         //assertNotNull(response);
         // TODO: test validations
