@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ibkr-client-jaxrs/src/main/docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-client-jaxrs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-client-jaxrs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-client-okhttp/src/main/docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-client-okhttp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-client-okhttp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-model/src/main/docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-server-jaxrs/src/main/docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-server-jaxrs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-server-jaxrs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-server-resteasy/src/main/docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-server-resteasy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-server-resteasy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-server-spring/src/main/docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-server-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibkr-server-spring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/obkr-server-spring/src/main/docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/obkr-server-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/obkr-server-spring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
