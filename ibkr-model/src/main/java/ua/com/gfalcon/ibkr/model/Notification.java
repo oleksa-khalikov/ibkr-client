@@ -24,9 +24,66 @@
 
 package ua.com.gfalcon.ibkr.model;
 
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
 /**
  * Notification.
  */
-public interface Notification {
+@Data
+@Validated
+public class Notification {
 
+    /**
+     * notification date.
+     */
+    @ApiModelProperty(value = "notification date")
+    @JsonProperty("D")
+    @SerializedName("D")
+    private String date;
+
+    /**
+     * unique way to reference this notification.
+     */
+    @ApiModelProperty(value = "unique way to reference this notification")
+    @JsonProperty("ID")
+    @SerializedName("ID")
+    private String id;
+
+    /**
+     * FYI code, we can use it to find whether the disclaimer is accepted or not in settings.
+     */
+    @ApiModelProperty(value = "FYI code, we can use it to find whether the disclaimer is accepted or not in settings")
+    @JsonProperty("FC")
+    @SerializedName("FC")
+    private String fyiCode;
+
+    /**
+     * content of notification.
+     */
+    @ApiModelProperty(value = "content of notification")
+    @JsonProperty("MD")
+    @SerializedName("MD")
+    private String content;
+
+    /**
+     * title of notification.
+     */
+    @ApiModelProperty(value = "title of notification")
+    @JsonProperty("MS")
+    @SerializedName("MS")
+    private String title;
+
+    /**
+     * 0-unread, 1-read
+     */
+    @ApiModelProperty(value = "0-unread, 1-read")
+    @JsonProperty("R")
+    @SerializedName("R")
+    private String read;
 }
