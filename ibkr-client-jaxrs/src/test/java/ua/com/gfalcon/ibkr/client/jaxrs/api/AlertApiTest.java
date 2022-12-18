@@ -61,6 +61,7 @@ import org.junit.Test;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 
 import ua.com.gfalcon.ibkr.client.jaxrs.api.AlertApi;
+import ua.com.gfalcon.ibkr.model.AlertActivation;
 import ua.com.gfalcon.ibkr.model.AlertRequest;
 import ua.com.gfalcon.ibkr.model.Body;
 
@@ -87,7 +88,7 @@ public class AlertApiTest {
     @Test
     public void iserverAccountAccountIdAlertActivatePostTest() {
         String accountId = null;
-        Body body = null;
+        AlertActivation body = null;
         //Object response = api.iserverAccountAccountIdAlertActivatePost(accountId, body);
         //assertNotNull(response);
         // TODO: test validations

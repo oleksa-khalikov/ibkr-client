@@ -28,6 +28,7 @@ import javax.validation.constraints.NotNull;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
+import ua.com.gfalcon.ibkr.model.AlertActivation;
 import ua.com.gfalcon.ibkr.model.AlertRequest;
 import ua.com.gfalcon.ibkr.model.Body;
 import ua.com.gfalcon.ibkr.model.Conid;
@@ -42,7 +43,7 @@ import ua.com.gfalcon.ibkr.model.Symbol;
  */
 public abstract class IserverApiService {
 
-    public abstract Response iserverAccountAccountIdAlertActivatePost(String accountId, Body body,
+    public abstract Response iserverAccountAccountIdAlertActivatePost(String accountId, AlertActivation body,
             SecurityContext securityContext) throws NotFoundException;
 
     public abstract Response iserverAccountAccountIdAlertAlertIdDelete(String accountId, String alertId,

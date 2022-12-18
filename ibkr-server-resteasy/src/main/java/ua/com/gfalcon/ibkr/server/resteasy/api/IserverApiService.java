@@ -27,6 +27,7 @@ package ua.com.gfalcon.ibkr.server.resteasy.api;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
+import ua.com.gfalcon.ibkr.model.AlertActivation;
 import ua.com.gfalcon.ibkr.model.AlertRequest;
 import ua.com.gfalcon.ibkr.model.Body;
 import ua.com.gfalcon.ibkr.model.Conid;
@@ -41,7 +42,7 @@ import ua.com.gfalcon.ibkr.model.Symbol;
  */
 public interface IserverApiService {
 
-    Response iserverAccountAccountIdAlertActivatePost(String accountId, Body body, SecurityContext securityContext)
+    Response iserverAccountAccountIdAlertActivatePost(String accountId, AlertActivation body, SecurityContext securityContext)
             throws NotFoundException;
 
     Response iserverAccountAccountIdAlertAlertIdDelete(String accountId, String alertId,

@@ -38,6 +38,7 @@ import javax.ws.rs.core.SecurityContext;
 
 import io.swagger.annotations.ApiParam;
 import ua.com.gfalcon.ibkr.model.AccountPnL;
+import ua.com.gfalcon.ibkr.model.AlertActivation;
 import ua.com.gfalcon.ibkr.model.AlertRequest;
 import ua.com.gfalcon.ibkr.model.AlertResponse;
 import ua.com.gfalcon.ibkr.model.AuthStatus;
@@ -109,7 +110,7 @@ public class IserverApi {
                     code = 200, message = "returns an object", response = Object.class)})
     public Response iserverAccountAccountIdAlertActivatePost(
             @ApiParam(value = "account id", required = true) @PathParam("accountId") String accountId,
-            @ApiParam(value = "order request info", required = true) Body body,
+            @ApiParam(value = "order request info", required = true) AlertActivation body,
             @Context SecurityContext securityContext) throws NotFoundException {
         return delegate.iserverAccountAccountIdAlertActivatePost(accountId, body, securityContext);
     }

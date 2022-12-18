@@ -42,6 +42,7 @@ import java.util.List;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import ua.com.gfalcon.ibkr.model.AlertActivation;
 import ua.com.gfalcon.ibkr.model.AlertRequest;
 import ua.com.gfalcon.ibkr.model.AlertResponse;
 import ua.com.gfalcon.ibkr.model.Body;
@@ -65,7 +66,7 @@ public class AlertApiTest {
     @Test
     public void iserverAccountAccountIdAlertActivatePostTest() throws Exception {
         String accountId = null;
-        Body body = null;
+        AlertActivation body = null;
         Object response = api.iserverAccountAccountIdAlertActivatePost(accountId, body);
 
         // TODO: test validations

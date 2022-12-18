@@ -37,6 +37,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import ua.com.gfalcon.ibkr.model.AlertActivation;
 import ua.com.gfalcon.ibkr.model.AlertRequest;
 import ua.com.gfalcon.ibkr.model.AlertResponse;
 import ua.com.gfalcon.ibkr.model.Body;
@@ -60,7 +61,7 @@ public interface AlertApi {
     @Produces({"application/json"})
     @ApiOperation(value = "Activate or deactivate an alert", tags = {})
     @ApiResponses(value = {@ApiResponse(code = 200, message = "returns an object", response = Object.class)})
-    public Object iserverAccountAccountIdAlertActivatePost(@PathParam("accountId") String accountId, Body body);
+    public Object iserverAccountAccountIdAlertActivatePost(@PathParam("accountId") String accountId, AlertActivation body);
 
     /**
      * Delete an alert.
