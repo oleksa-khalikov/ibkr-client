@@ -39,7 +39,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 import io.swagger.annotations.ApiParam;
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.model.Notifications;
 
@@ -197,7 +197,7 @@ public class FyiApi {
             value = {@io.swagger.annotations.ApiResponse(
                     code = 200, message = "200 means successful", response = Object.class)})
     public Response fyiSettingsTypecodePost(@PathParam("typecode") String typecode,
-            @ApiParam(value = "", required = true) Body body, @Context SecurityContext securityContext)
+            @ApiParam(value = "", required = true) CertainSubscription body, @Context SecurityContext securityContext)
             throws NotFoundException {
         return service.fyiSettingsTypecodePost(typecode, body, securityContext);
     }

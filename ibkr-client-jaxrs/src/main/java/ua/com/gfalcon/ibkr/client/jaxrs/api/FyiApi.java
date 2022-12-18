@@ -39,7 +39,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.model.Notifications;
 
@@ -171,7 +171,7 @@ public interface FyiApi {
     @Produces({"application/json"})
     @ApiOperation(value = "Enable/Disable certain subscription", tags = {})
     @ApiResponses(value = {@ApiResponse(code = 200, message = "200 means successful", response = Object.class)})
-    public Object fyiSettingsTypecodePost(@PathParam("typecode") String typecode, Body body);
+    public Object fyiSettingsTypecodePost(@PathParam("typecode") String typecode, CertainSubscription body);
 
     /**
      * Get unread number of fyis. The HTTP method POST is also supported.

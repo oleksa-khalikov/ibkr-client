@@ -28,7 +28,7 @@ import javax.validation.constraints.NotNull;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.server.jaxrs.api.ApiResponseMessage;
 import ua.com.gfalcon.ibkr.server.jaxrs.api.FyiApiService;
@@ -127,7 +127,7 @@ public class FyiApiServiceImpl extends FyiApiService {
     }
 
     @Override
-    public Response fyiSettingsTypecodePost(String typecode, Body body, SecurityContext securityContext)
+    public Response fyiSettingsTypecodePost(String typecode, CertainSubscription body, SecurityContext securityContext)
             throws NotFoundException {
         // do some magic!
         return Response.ok()

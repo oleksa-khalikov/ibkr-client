@@ -60,8 +60,7 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 
-import ua.com.gfalcon.ibkr.client.jaxrs.api.FyiApi;
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 
 
@@ -241,7 +240,7 @@ public class FyiApiTest {
     @Test
     public void fyiSettingsTypecodePostTest() {
         String typecode = null;
-        Body body = null;
+        CertainSubscription body = null;
         //Object response = api.fyiSettingsTypecodePost(typecode, body);
         //assertNotNull(response);
         // TODO: test validations

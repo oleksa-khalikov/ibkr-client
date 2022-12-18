@@ -54,7 +54,7 @@ import ua.com.gfalcon.ibkr.client.okhttp.Configuration;
 import ua.com.gfalcon.ibkr.client.okhttp.Pair;
 import ua.com.gfalcon.ibkr.client.okhttp.ProgressRequestBody;
 import ua.com.gfalcon.ibkr.client.okhttp.ProgressResponseBody;
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.model.Notifications;
 
@@ -1477,7 +1477,7 @@ public class FyiApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object fyiSettingsTypecodePost(String typecode, Body body) throws ApiException {
+    public Object fyiSettingsTypecodePost(String typecode, CertainSubscription body) throws ApiException {
         ApiResponse<Object> resp = fyiSettingsTypecodePostWithHttpInfo(typecode, body);
         return resp.getData();
     }
@@ -1491,7 +1491,7 @@ public class FyiApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> fyiSettingsTypecodePostWithHttpInfo(String typecode, Body body) throws ApiException {
+    public ApiResponse<Object> fyiSettingsTypecodePostWithHttpInfo(String typecode, CertainSubscription body) throws ApiException {
         com.squareup.okhttp.Call call = fyiSettingsTypecodePostValidateBeforeCall(typecode, body, null, null);
         Type localVarReturnType = new TypeToken<Object>() {
         }.getType();
@@ -1499,7 +1499,7 @@ public class FyiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call fyiSettingsTypecodePostValidateBeforeCall(String typecode, Body body,
+    private com.squareup.okhttp.Call fyiSettingsTypecodePostValidateBeforeCall(String typecode, CertainSubscription body,
             final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
 
@@ -1531,10 +1531,10 @@ public class FyiApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call fyiSettingsTypecodePostCall(String typecode, Body body,
+    public com.squareup.okhttp.Call fyiSettingsTypecodePostCall(String typecode, CertainSubscription body,
             final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        final Object localVarPostBody = body;
+        final CertainSubscription localVarPostBody = body;
 
         // create path and map variables
         final String localVarPath = "/fyi/settings/{typecode}".replaceAll("\\{" + "typecode" + "\\}",
@@ -1589,7 +1589,7 @@ public class FyiApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call fyiSettingsTypecodePostAsync(String typecode, Body body,
+    public com.squareup.okhttp.Call fyiSettingsTypecodePostAsync(String typecode, CertainSubscription body,
             final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;

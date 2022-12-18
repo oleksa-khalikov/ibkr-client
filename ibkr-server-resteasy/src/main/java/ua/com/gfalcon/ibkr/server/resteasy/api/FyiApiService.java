@@ -27,7 +27,7 @@ package ua.com.gfalcon.ibkr.server.resteasy.api;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 
 /**
@@ -58,7 +58,7 @@ public interface FyiApiService {
 
     Response fyiSettingsGet(SecurityContext securityContext) throws NotFoundException;
 
-    Response fyiSettingsTypecodePost(String typecode, Body body, SecurityContext securityContext)
+    Response fyiSettingsTypecodePost(String typecode, CertainSubscription body, SecurityContext securityContext)
             throws NotFoundException;
 
     Response fyiUnreadnumberGet(SecurityContext securityContext) throws NotFoundException;

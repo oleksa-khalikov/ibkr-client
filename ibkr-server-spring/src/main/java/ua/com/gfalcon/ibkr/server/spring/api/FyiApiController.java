@@ -43,7 +43,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.swagger.annotations.ApiParam;
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.model.Notifications;
 
@@ -284,7 +284,7 @@ public class FyiApiController implements FyiApi {
      */
     public ResponseEntity<Object> fyiSettingsTypecodePost(
             @ApiParam(value = "fyi code", required = true) @PathVariable("typecode") String typecode,
-            @ApiParam(value = "", required = true) @Valid @RequestBody Body body) {
+            @ApiParam(value = "", required = true) @Valid @RequestBody CertainSubscription body) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {

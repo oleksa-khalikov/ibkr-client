@@ -48,7 +48,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.model.Notifications;
 
@@ -172,7 +172,7 @@ public interface FyiApi {
     @RequestMapping(value = "/fyi/settings/{typecode}", produces = {"application/json"}, method = RequestMethod.POST)
     ResponseEntity<Object> fyiSettingsTypecodePost(
             @ApiParam(value = "fyi code", required = true) @PathVariable("typecode") String typecode,
-            @ApiParam(value = "", required = true) @Valid @RequestBody Body body);
+            @ApiParam(value = "", required = true) @Valid @RequestBody CertainSubscription body);
 
 
     @ApiOperation(

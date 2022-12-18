@@ -42,7 +42,7 @@ import java.util.List;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.model.Notifications;
 
@@ -199,7 +199,7 @@ public class FyiApiTest {
     @Test
     public void fyiSettingsTypecodePostTest() throws Exception {
         String typecode = null;
-        Body body = null;
+        CertainSubscription body = null;
         Object response = api.fyiSettingsTypecodePost(typecode, body);
 
         // TODO: test validations

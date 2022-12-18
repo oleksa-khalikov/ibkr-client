@@ -28,7 +28,7 @@ import javax.validation.constraints.NotNull;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.CertainSubscription;
 import ua.com.gfalcon.ibkr.model.DeviceOption;
 
 /**
@@ -64,7 +64,7 @@ public abstract class FyiApiService {
 
     public abstract Response fyiSettingsGet(SecurityContext securityContext) throws NotFoundException;
 
-    public abstract Response fyiSettingsTypecodePost(String typecode, Body body, SecurityContext securityContext)
+    public abstract Response fyiSettingsTypecodePost(String typecode, CertainSubscription body, SecurityContext securityContext)
             throws NotFoundException;
 
     public abstract Response fyiUnreadnumberGet(SecurityContext securityContext) throws NotFoundException;
