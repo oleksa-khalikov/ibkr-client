@@ -62,6 +62,7 @@ import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 
 import ua.com.gfalcon.ibkr.client.jaxrs.api.FyiApi;
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.DeviceOption;
 
 
 /**
@@ -98,8 +99,8 @@ public class FyiApiTest {
      */
     @Test
     public void fyiDeliveryoptionsDevicePostTest() {
-        Body body = null;
-        //Object response = api.fyiDeliveryoptionsDevicePost(body);
+        DeviceOption body = null;
+        Object response = api.fyiDeliveryoptionsDevicePost(body);
         //assertNotNull(response);
         // TODO: test validations
 

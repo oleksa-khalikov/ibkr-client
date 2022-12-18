@@ -40,6 +40,7 @@ import javax.ws.rs.core.SecurityContext;
 
 import io.swagger.annotations.ApiParam;
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.model.Notifications;
 
 /**
@@ -74,7 +75,7 @@ public class FyiApi {
     @io.swagger.annotations.ApiResponses(
             value = {@io.swagger.annotations.ApiResponse(
                     code = 200, message = "200 means successful", response = Object.class)})
-    public Response fyiDeliveryoptionsDevicePost(@ApiParam(value = "device info", required = true) Body body,
+    public Response fyiDeliveryoptionsDevicePost(@ApiParam(value = "device info", required = true) DeviceOption body,
             @Context SecurityContext securityContext) throws NotFoundException {
         return service.fyiDeliveryoptionsDevicePost(body, securityContext);
     }

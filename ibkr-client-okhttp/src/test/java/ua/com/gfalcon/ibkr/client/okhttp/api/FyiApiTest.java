@@ -43,6 +43,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.model.Notifications;
 
 /**
@@ -74,7 +75,7 @@ public class FyiApiTest {
      */
     @Test
     public void fyiDeliveryoptionsDevicePostTest() throws Exception {
-        Body body = null;
+        DeviceOption body = null;
         Object response = api.fyiDeliveryoptionsDevicePost(body);
 
         // TODO: test validations

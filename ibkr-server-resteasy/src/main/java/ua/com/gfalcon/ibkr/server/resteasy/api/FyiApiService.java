@@ -28,6 +28,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.DeviceOption;
 
 /**
  * Fyi api service.
@@ -37,7 +38,7 @@ public interface FyiApiService {
     Response fyiDeliveryoptionsDeviceIdDelete(String deviceId, SecurityContext securityContext)
             throws NotFoundException;
 
-    Response fyiDeliveryoptionsDevicePost(Body body, SecurityContext securityContext) throws NotFoundException;
+    Response fyiDeliveryoptionsDevicePost(DeviceOption body, SecurityContext securityContext) throws NotFoundException;
 
     Response fyiDeliveryoptionsEmailPut(String enabled, SecurityContext securityContext) throws NotFoundException;
 

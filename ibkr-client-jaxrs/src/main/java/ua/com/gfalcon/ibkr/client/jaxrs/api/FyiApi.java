@@ -40,6 +40,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.DeviceOption;
 import ua.com.gfalcon.ibkr.model.Notifications;
 
 /**
@@ -67,7 +68,7 @@ public interface FyiApi {
     @Produces({"application/json"})
     @ApiOperation(value = "Enable/Disable device option", tags = {})
     @ApiResponses(value = {@ApiResponse(code = 200, message = "200 means successful", response = Object.class)})
-    public Object fyiDeliveryoptionsDevicePost(Body body);
+    public Object fyiDeliveryoptionsDevicePost(DeviceOption body);
 
     /**
      * Enable/Disable email option.
