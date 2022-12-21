@@ -1,17 +1,25 @@
 /*
- *   Copyright 2016-2022 Oleksii V. KHALIKOV
+ * MIT License
  *
- *    Licensed under the Apache License, Version 2.0 (the "License");
- *    you may not use this file except in compliance with the License.
- *    You may obtain a copy of the License at
+ * Copyright (c) 2015-2022 Oleksii Khalikov
  *
- *        http://www.apache.org/licenses/LICENSE-2.0
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
- *    Unless required by applicable law or agreed to in writing, software
- *    distributed under the License is distributed on an "AS IS" BASIS,
- *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *    See the License for the specific language governing permissions and
- *    limitations under the License.
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
 /*
@@ -50,6 +58,7 @@ import ua.com.gfalcon.ibkr.model.Body;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
 import ua.com.gfalcon.ibkr.model.OrderStatus;
+import ua.com.gfalcon.ibkr.model.OrdersRequest;
 
 /**
  * Order api.
@@ -771,7 +780,7 @@ public class OrderApi {
      * @return List&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Object> iserverAccountAccountIdOrdersPost(String accountId, Body body) throws ApiException {
+    public List<Object> iserverAccountAccountIdOrdersPost(String accountId, OrdersRequest body) throws ApiException {
         ApiResponse<List<Object>> resp = iserverAccountAccountIdOrdersPostWithHttpInfo(accountId, body);
         return resp.getData();
     }
@@ -798,7 +807,7 @@ public class OrderApi {
      * @return ApiResponse&lt;List&lt;Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Object>> iserverAccountAccountIdOrdersPostWithHttpInfo(String accountId, Body body)
+    public ApiResponse<List<Object>> iserverAccountAccountIdOrdersPostWithHttpInfo(String accountId, OrdersRequest body)
             throws ApiException {
         com.squareup.okhttp.Call call = iserverAccountAccountIdOrdersPostValidateBeforeCall(accountId, body, null,
                 null);
@@ -808,7 +817,7 @@ public class OrderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call iserverAccountAccountIdOrdersPostValidateBeforeCall(String accountId, Body body,
+    private com.squareup.okhttp.Call iserverAccountAccountIdOrdersPostValidateBeforeCall(String accountId, OrdersRequest body,
             final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
 
@@ -841,10 +850,10 @@ public class OrderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call iserverAccountAccountIdOrdersPostCall(String accountId, Body body,
+    public com.squareup.okhttp.Call iserverAccountAccountIdOrdersPostCall(String accountId, OrdersRequest body,
             final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        final Object localVarPostBody = body;
+        final OrdersRequest localVarPostBody = body;
 
         // create path and map variables
         final String localVarPath = "/iserver/account/{accountId}/orders".replaceAll("\\{" + "accountId" + "\\}",
@@ -912,7 +921,7 @@ public class OrderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call iserverAccountAccountIdOrdersPostAsync(String accountId, Body body,
+    public com.squareup.okhttp.Call iserverAccountAccountIdOrdersPostAsync(String accountId, OrdersRequest body,
             final ApiCallback<List<Object>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;

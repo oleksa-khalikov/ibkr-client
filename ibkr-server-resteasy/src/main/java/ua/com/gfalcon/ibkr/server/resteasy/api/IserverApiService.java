@@ -33,6 +33,7 @@ import ua.com.gfalcon.ibkr.model.Body;
 import ua.com.gfalcon.ibkr.model.Conid;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
+import ua.com.gfalcon.ibkr.model.OrdersRequest;
 import ua.com.gfalcon.ibkr.model.ScannerParams;
 import ua.com.gfalcon.ibkr.model.SetAccount;
 import ua.com.gfalcon.ibkr.model.Symbol;
@@ -66,7 +67,7 @@ public interface IserverApiService {
     Response iserverAccountAccountIdOrderWhatifPost(String accountId, OrderRequest body,
             SecurityContext securityContext) throws NotFoundException;
 
-    Response iserverAccountAccountIdOrdersPost(String accountId, Body body, SecurityContext securityContext)
+    Response iserverAccountAccountIdOrdersPost(String accountId, OrdersRequest body, SecurityContext securityContext)
             throws NotFoundException;
 
     Response iserverAccountAccountIdOrdersWhatifPost(String accountId, Body body, SecurityContext securityContext)

@@ -63,6 +63,7 @@ import ua.com.gfalcon.ibkr.model.MarketDataCancelSingle;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
 import ua.com.gfalcon.ibkr.model.OrderStatus;
+import ua.com.gfalcon.ibkr.model.OrdersRequest;
 import ua.com.gfalcon.ibkr.model.ScannerParams;
 import ua.com.gfalcon.ibkr.model.ScannerParamsList;
 import ua.com.gfalcon.ibkr.model.ScannerResult;
@@ -219,7 +220,7 @@ public interface IserverApi {
             value = "/iserver/account/{accountId}/orders", produces = {"application/json"}, method = RequestMethod.POST)
     ResponseEntity<List<Object>> iserverAccountAccountIdOrdersPost(
             @ApiParam(value = "account id", required = true) @PathVariable("accountId") String accountId,
-            @ApiParam(value = "order request info", required = true) @Valid @RequestBody Body body);
+            @ApiParam(value = "order request info", required = true) @Valid @RequestBody OrdersRequest body);
 
 
     @ApiOperation(

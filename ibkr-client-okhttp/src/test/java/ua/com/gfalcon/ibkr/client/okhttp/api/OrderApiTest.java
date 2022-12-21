@@ -46,6 +46,7 @@ import ua.com.gfalcon.ibkr.model.Body;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
 import ua.com.gfalcon.ibkr.model.OrderStatus;
+import ua.com.gfalcon.ibkr.model.OrdersRequest;
 
 /**
  * API tests for OrderApi
@@ -152,7 +153,7 @@ public class OrderApiTest {
     @Test
     public void iserverAccountAccountIdOrdersPostTest() throws Exception {
         String accountId = null;
-        Body body = null;
+        OrdersRequest body = null;
         List<Object> response = api.iserverAccountAccountIdOrdersPost(accountId, body);
 
         // TODO: test validations

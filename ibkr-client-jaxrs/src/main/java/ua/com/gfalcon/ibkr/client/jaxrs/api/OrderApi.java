@@ -41,6 +41,7 @@ import ua.com.gfalcon.ibkr.model.Body;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
 import ua.com.gfalcon.ibkr.model.OrderStatus;
+import ua.com.gfalcon.ibkr.model.OrdersRequest;
 
 /**
  * Client Portal Web API.
@@ -139,7 +140,7 @@ public interface OrderApi {
     @ApiResponses(
             value = {@ApiResponse(
                     code = 200, message = "returns an array", response = Object.class, responseContainer = "List")})
-    public List<Object> iserverAccountAccountIdOrdersPost(@PathParam("accountId") String accountId, Body body);
+    public List<Object> iserverAccountAccountIdOrdersPost(@PathParam("accountId") String accountId, OrdersRequest body);
 
     /**
      * Preview Orders

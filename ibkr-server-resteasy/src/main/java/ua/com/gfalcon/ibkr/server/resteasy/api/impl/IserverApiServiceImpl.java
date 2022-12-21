@@ -34,6 +34,7 @@ import ua.com.gfalcon.ibkr.model.Body;
 import ua.com.gfalcon.ibkr.model.Conid;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
+import ua.com.gfalcon.ibkr.model.OrdersRequest;
 import ua.com.gfalcon.ibkr.model.ScannerParams;
 import ua.com.gfalcon.ibkr.model.SetAccount;
 import ua.com.gfalcon.ibkr.model.Symbol;
@@ -138,7 +139,7 @@ public class IserverApiServiceImpl implements IserverApiService {
     /**
      * Iserver account account id orders post.
      */
-    public Response iserverAccountAccountIdOrdersPost(String accountId, Body body, SecurityContext securityContext)
+    public Response iserverAccountAccountIdOrdersPost(String accountId, OrdersRequest body, SecurityContext securityContext)
             throws NotFoundException {
         // do some magic!
         return Response.ok()

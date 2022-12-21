@@ -53,6 +53,7 @@ import ua.com.gfalcon.ibkr.model.MarketDataCancelSingle;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
 import ua.com.gfalcon.ibkr.model.OrderStatus;
+import ua.com.gfalcon.ibkr.model.OrdersRequest;
 import ua.com.gfalcon.ibkr.model.ScannerParams;
 import ua.com.gfalcon.ibkr.model.ScannerParamsList;
 import ua.com.gfalcon.ibkr.model.ScannerResult;
@@ -249,7 +250,7 @@ public class IserverApi {
             value = {@io.swagger.annotations.ApiResponse(
                     code = 200, message = "returns an array", response = Object.class, responseContainer = "List")})
     public Response iserverAccountAccountIdOrdersPost(@PathParam("accountId") String accountId,
-            @ApiParam(value = "order request info", required = true) Body body,
+            @ApiParam(value = "order request info", required = true) OrdersRequest body,
             @Context SecurityContext securityContext) throws NotFoundException {
         return service.iserverAccountAccountIdOrdersPost(accountId, body, securityContext);
     }
