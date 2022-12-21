@@ -150,7 +150,7 @@ public class IserverApiServiceImpl implements IserverApiService {
     /**
      * Iserver account account id orders whatif post.
      */
-    public Response iserverAccountAccountIdOrdersWhatifPost(String accountId, Body body,
+    public Response iserverAccountAccountIdOrdersWhatifPost(String accountId, OrdersRequest body,
             SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok()

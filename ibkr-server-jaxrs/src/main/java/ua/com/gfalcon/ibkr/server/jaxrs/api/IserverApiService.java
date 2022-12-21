@@ -71,7 +71,7 @@ public abstract class IserverApiService {
     public abstract Response iserverAccountAccountIdOrdersPost(String accountId, OrdersRequest body,
             SecurityContext securityContext) throws NotFoundException;
 
-    public abstract Response iserverAccountAccountIdOrdersWhatifPost(String accountId, Body body,
+    public abstract Response iserverAccountAccountIdOrdersWhatifPost(String accountId, OrdersRequest body,
             SecurityContext securityContext) throws NotFoundException;
 
     public abstract Response iserverAccountAlertIdGet(String id, SecurityContext securityContext)

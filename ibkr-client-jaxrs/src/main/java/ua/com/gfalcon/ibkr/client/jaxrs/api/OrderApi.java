@@ -153,7 +153,7 @@ public interface OrderApi {
     @Produces({"application/json"})
     @ApiOperation(value = "Preview Orders", tags = {})
     @ApiResponses(value = {@ApiResponse(code = 200, message = "returns an object", response = Object.class)})
-    public Object iserverAccountAccountIdOrdersWhatifPost(@PathParam("accountId") String accountId, Body body);
+    public Object iserverAccountAccountIdOrdersWhatifPost(@PathParam("accountId") String accountId, OrdersRequest body);
 
     /**
      * Order Status.

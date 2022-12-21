@@ -234,7 +234,7 @@ public interface IserverApi {
             method = RequestMethod.POST)
     ResponseEntity<Object> iserverAccountAccountIdOrdersWhatifPost(
             @ApiParam(value = "account id", required = true) @PathVariable("accountId") String accountId,
-            @ApiParam(value = "order info", required = true) @Valid @RequestBody Body body);
+            @ApiParam(value = "order info", required = true) @Valid @RequestBody OrdersRequest body);
 
 
     @ApiOperation(

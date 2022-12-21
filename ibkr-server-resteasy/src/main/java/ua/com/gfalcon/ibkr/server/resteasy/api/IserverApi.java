@@ -267,7 +267,7 @@ public class IserverApi {
             value = {@io.swagger.annotations.ApiResponse(
                     code = 200, message = "returns an object", response = Object.class)})
     public Response iserverAccountAccountIdOrdersWhatifPost(@PathParam("accountId") String accountId,
-            @ApiParam(value = "order info", required = true) Body body, @Context SecurityContext securityContext)
+            @ApiParam(value = "order info", required = true) OrdersRequest body, @Context SecurityContext securityContext)
             throws NotFoundException {
         return service.iserverAccountAccountIdOrdersWhatifPost(accountId, body, securityContext);
     }

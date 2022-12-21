@@ -70,7 +70,7 @@ public interface IserverApiService {
     Response iserverAccountAccountIdOrdersPost(String accountId, OrdersRequest body, SecurityContext securityContext)
             throws NotFoundException;
 
-    Response iserverAccountAccountIdOrdersWhatifPost(String accountId, Body body, SecurityContext securityContext)
+    Response iserverAccountAccountIdOrdersWhatifPost(String accountId, OrdersRequest body, SecurityContext securityContext)
             throws NotFoundException;
 
     Response iserverAccountAlertIdGet(String id, SecurityContext securityContext) throws NotFoundException;

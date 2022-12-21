@@ -302,7 +302,7 @@ public class IserverApi {
                     code = 200, message = "returns an object", response = Object.class)})
     public Response iserverAccountAccountIdOrdersWhatifPost(
             @ApiParam(value = "account id", required = true) @PathParam("accountId") String accountId,
-            @ApiParam(value = "order info", required = true) Body body, @Context SecurityContext securityContext)
+            @ApiParam(value = "order info", required = true) OrdersRequest body, @Context SecurityContext securityContext)
             throws NotFoundException {
         return delegate.iserverAccountAccountIdOrdersWhatifPost(accountId, body, securityContext);
     }

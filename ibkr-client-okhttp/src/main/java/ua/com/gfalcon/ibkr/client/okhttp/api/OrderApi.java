@@ -961,7 +961,7 @@ public class OrderApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object iserverAccountAccountIdOrdersWhatifPost(String accountId, Body body) throws ApiException {
+    public Object iserverAccountAccountIdOrdersWhatifPost(String accountId, OrdersRequest body) throws ApiException {
         ApiResponse<Object> resp = iserverAccountAccountIdOrdersWhatifPostWithHttpInfo(accountId, body);
         return resp.getData();
     }
@@ -976,7 +976,7 @@ public class OrderApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> iserverAccountAccountIdOrdersWhatifPostWithHttpInfo(String accountId, Body body)
+    public ApiResponse<Object> iserverAccountAccountIdOrdersWhatifPostWithHttpInfo(String accountId, OrdersRequest body)
             throws ApiException {
         com.squareup.okhttp.Call call = iserverAccountAccountIdOrdersWhatifPostValidateBeforeCall(accountId, body, null,
                 null);
@@ -987,7 +987,7 @@ public class OrderApi {
 
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call iserverAccountAccountIdOrdersWhatifPostValidateBeforeCall(String accountId,
-            Body body, final ProgressResponseBody.ProgressListener progressListener,
+            OrdersRequest body, final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
 
         // verify the required parameter 'accountId' is set
@@ -1021,10 +1021,10 @@ public class OrderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call iserverAccountAccountIdOrdersWhatifPostCall(String accountId, Body body,
+    public com.squareup.okhttp.Call iserverAccountAccountIdOrdersWhatifPostCall(String accountId, OrdersRequest body,
             final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        final Object localVarPostBody = body;
+        final OrdersRequest localVarPostBody = body;
 
         // create path and map variables
         final String localVarPath = "/iserver/account/{accountId}/orders/whatif"
@@ -1080,7 +1080,7 @@ public class OrderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call iserverAccountAccountIdOrdersWhatifPostAsync(String accountId, Body body,
+    public com.squareup.okhttp.Call iserverAccountAccountIdOrdersWhatifPostAsync(String accountId, OrdersRequest body,
             final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
