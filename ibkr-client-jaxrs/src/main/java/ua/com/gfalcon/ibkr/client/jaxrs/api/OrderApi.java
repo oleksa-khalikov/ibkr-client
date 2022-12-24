@@ -38,6 +38,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.Confirmation;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
 import ua.com.gfalcon.ibkr.model.OrderStatus;
@@ -215,7 +216,7 @@ public interface OrderApi {
                     response = Object.class, responseContainer = "List"), @ApiResponse(
                     code = 400, message = "When you send \"confirmed-false\" in the request, you will receive this",
                     response = Object.class)})
-    public List<Object> iserverReplyReplyidPost(@PathParam("replyid") String replyid, Body body);
+    public List<Object> iserverReplyReplyidPost(@PathParam("replyid") String replyid, Confirmation body);
 
 }
 

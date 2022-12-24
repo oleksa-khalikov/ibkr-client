@@ -55,6 +55,7 @@ import ua.com.gfalcon.ibkr.client.okhttp.Pair;
 import ua.com.gfalcon.ibkr.client.okhttp.ProgressRequestBody;
 import ua.com.gfalcon.ibkr.client.okhttp.ProgressResponseBody;
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.Confirmation;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
 import ua.com.gfalcon.ibkr.model.OrderStatus;
@@ -1568,7 +1569,7 @@ public class OrderApi {
      * @return List&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Object> iserverReplyReplyidPost(String replyid, Body body) throws ApiException {
+    public List<Object> iserverReplyReplyidPost(String replyid, Confirmation body) throws ApiException {
         ApiResponse<List<Object>> resp = iserverReplyReplyidPostWithHttpInfo(replyid, body);
         return resp.getData();
     }
@@ -1582,7 +1583,7 @@ public class OrderApi {
      * @return ApiResponse&lt;List&lt;Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Object>> iserverReplyReplyidPostWithHttpInfo(String replyid, Body body)
+    public ApiResponse<List<Object>> iserverReplyReplyidPostWithHttpInfo(String replyid, Confirmation body)
             throws ApiException {
         com.squareup.okhttp.Call call = iserverReplyReplyidPostValidateBeforeCall(replyid, body, null, null);
         Type localVarReturnType = new TypeToken<List<Object>>() {
@@ -1591,7 +1592,7 @@ public class OrderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call iserverReplyReplyidPostValidateBeforeCall(String replyid, Body body,
+    private com.squareup.okhttp.Call iserverReplyReplyidPostValidateBeforeCall(String replyid, Confirmation body,
             final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
 
@@ -1624,10 +1625,10 @@ public class OrderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call iserverReplyReplyidPostCall(String replyid, Body body,
+    public com.squareup.okhttp.Call iserverReplyReplyidPostCall(String replyid, Confirmation body,
             final ProgressResponseBody.ProgressListener progressListener,
             final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        final Object localVarPostBody = body;
+        final Confirmation localVarPostBody = body;
 
         // create path and map variables
         final String localVarPath = "/iserver/reply/{replyid}".replaceAll("\\{" + "replyid" + "\\}",
@@ -1683,7 +1684,7 @@ public class OrderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call iserverReplyReplyidPostAsync(String replyid, Body body,
+    public com.squareup.okhttp.Call iserverReplyReplyidPostAsync(String replyid, Confirmation body,
             final ApiCallback<List<Object>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;

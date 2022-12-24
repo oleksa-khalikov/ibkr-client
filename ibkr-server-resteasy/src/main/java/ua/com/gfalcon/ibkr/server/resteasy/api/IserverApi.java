@@ -46,6 +46,7 @@ import ua.com.gfalcon.ibkr.model.AuthStatus;
 import ua.com.gfalcon.ibkr.model.Body;
 import ua.com.gfalcon.ibkr.model.BooleanConfirmed;
 import ua.com.gfalcon.ibkr.model.BrokerageAccount;
+import ua.com.gfalcon.ibkr.model.Confirmation;
 import ua.com.gfalcon.ibkr.model.Conid;
 import ua.com.gfalcon.ibkr.model.Contract;
 import ua.com.gfalcon.ibkr.model.HistoryData;
@@ -617,7 +618,7 @@ public class IserverApi {
                             message = "When you send \"confirmed-false\" in the request, you will receive this",
                             response = Object.class)})
     public Response iserverReplyReplyidPost(@PathParam("replyid") String replyid,
-            @ApiParam(value = "Answer to question", required = true) Body body,
+            @ApiParam(value = "Answer to question", required = true) Confirmation body,
             @Context SecurityContext securityContext) throws NotFoundException {
         return service.iserverReplyReplyidPost(replyid, body, securityContext);
     }

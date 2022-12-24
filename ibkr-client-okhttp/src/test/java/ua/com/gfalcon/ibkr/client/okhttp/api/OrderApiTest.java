@@ -43,6 +43,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.Confirmation;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
 import ua.com.gfalcon.ibkr.model.OrderStatus;
@@ -170,7 +171,7 @@ public class OrderApiTest {
     @Test
     public void iserverAccountAccountIdOrdersWhatifPostTest() throws Exception {
         String accountId = null;
-        Body body = null;
+        OrdersRequest body = null;
         Object response = api.iserverAccountAccountIdOrdersWhatifPost(accountId, body);
 
         // TODO: test validations
@@ -237,7 +238,7 @@ public class OrderApiTest {
     @Test
     public void iserverReplyReplyidPostTest() throws Exception {
         String replyid = null;
-        Body body = null;
+        Confirmation body = null;
         List<Object> response = api.iserverReplyReplyidPost(replyid, body);
 
         // TODO: test validations

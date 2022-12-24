@@ -51,6 +51,7 @@ import ua.com.gfalcon.ibkr.model.AuthStatus;
 import ua.com.gfalcon.ibkr.model.Body;
 import ua.com.gfalcon.ibkr.model.BooleanConfirmed;
 import ua.com.gfalcon.ibkr.model.BrokerageAccount;
+import ua.com.gfalcon.ibkr.model.Confirmation;
 import ua.com.gfalcon.ibkr.model.Conid;
 import ua.com.gfalcon.ibkr.model.Contract;
 import ua.com.gfalcon.ibkr.model.HistoryData;
@@ -699,7 +700,7 @@ public class IserverApiController implements IserverApi {
     public ResponseEntity<List<Object>> iserverReplyReplyidPost(@ApiParam(
             value = "Please use the \"id\" from the response of \"Place Order\" endpoint", required = true)
             @PathVariable("replyid") String replyid,
-            @ApiParam(value = "Answer to question", required = true) @Valid @RequestBody Body body) {
+            @ApiParam(value = "Answer to question", required = true) @Valid @RequestBody Confirmation body) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {

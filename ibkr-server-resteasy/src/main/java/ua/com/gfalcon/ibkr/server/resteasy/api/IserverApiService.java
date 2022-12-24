@@ -30,6 +30,7 @@ import javax.ws.rs.core.SecurityContext;
 import ua.com.gfalcon.ibkr.model.AlertActivation;
 import ua.com.gfalcon.ibkr.model.AlertRequest;
 import ua.com.gfalcon.ibkr.model.Body;
+import ua.com.gfalcon.ibkr.model.Confirmation;
 import ua.com.gfalcon.ibkr.model.Conid;
 import ua.com.gfalcon.ibkr.model.ModifyOrder;
 import ua.com.gfalcon.ibkr.model.OrderRequest;
@@ -118,7 +119,7 @@ public interface IserverApiService {
 
     Response iserverReauthenticatePost(SecurityContext securityContext) throws NotFoundException;
 
-    Response iserverReplyReplyidPost(String replyid, Body body, SecurityContext securityContext)
+    Response iserverReplyReplyidPost(String replyid, Confirmation body, SecurityContext securityContext)
             throws NotFoundException;
 
     Response iserverScannerParamsGet(SecurityContext securityContext) throws NotFoundException;
